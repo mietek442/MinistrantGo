@@ -26,8 +26,9 @@ namespace Api
                 });
             });
             builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            // Add services to the container.
-            builder.Services.AddMediatR(cfg => {
+           
+            builder.Services.AddMediatR(cfg =>
+            {
                 cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly());
             });
             builder.Services.AddControllers().AddJsonOptions(option =>
@@ -45,7 +46,7 @@ namespace Api
                 option.SwaggerDoc("v1", new OpenApiInfo { Title = "Api do  Restauracji na obiekotwe", Version = "v1" });
 
 
-               
+
             });
             builder.Services.AddDbContext<ApplicationContext>(options =>
             {
@@ -60,7 +61,7 @@ namespace Api
 
             var app = builder.Build();
             app.UseCors();
-            // Configure the HTTP request pipeline.
+         
             if (app.Environment.IsDevelopment())
             {
                 app.MapOpenApi();

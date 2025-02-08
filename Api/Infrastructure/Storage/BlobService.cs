@@ -39,7 +39,7 @@ namespace Api.Infrastructure.Storage
             var fieldId = Guid.NewGuid();
 
             BlobClient blobClient = containerClient.GetBlobClient(fieldId.ToString());
-
+            
             await blobClient.UploadAsync(stream, new BlobHttpHeaders { ContentType = contentType }, cancellationToken: cancellationToken);
             return fieldId;
         }
