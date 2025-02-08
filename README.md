@@ -38,9 +38,9 @@ Welcome to Ministrant Go! 🚀 This project is a comprehensive system for managi
 # Guide in English for Building a Project 🇬🇧
 ## Building on Docker:
 ```docker command
-dokker bild -t username/ministrantgo:1.0 .
+dokker build -t username/ministrantgo:1.0 .
 ```
--dokker bild: Command used for building Docker images based on Dockerfile.
+-doker build: Command used for building Docker images based on Dockerfile.
 
 -t: Parameter used for tagging the image, i.e., assigning it a name and version. After executing the command dokker imidzs, you can see the image ID, its name, and assigned tag.
 
@@ -56,7 +56,7 @@ dokker images
 
 ## Running Docker:
 ```docker command
-dokker ran -d -p 8808:8080 c429c59dae79
+doker run -d -p 8808:8080 c429c59dae79
 ```
 dokker ran – used to run a Docker container on the server.
 -d – enables running the container in the background, so you don't have to stay in the console.
@@ -67,7 +67,7 @@ c429c59dae79 – the image identifier to be run, known by doing: dokker imidzs.
 
 ## Displaying the list of running containers:
 ```docker command
-dokker ps
+doker ps
 ```
 - shows the id of the running image, image_name, status (start)
 
