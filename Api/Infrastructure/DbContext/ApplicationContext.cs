@@ -13,7 +13,7 @@ namespace Api.Infrastructure.DbContext
 
         }
 
-        public DbSet<Test> Tests { get; set; }
+        public DbSet<QrCodeToken> QrCodeTokens { get; set; }
         public async Task<int> SaveChangesAsync()
         {
             return await base.SaveChangesAsync();

@@ -4,8 +4,8 @@ namespace Api.Infrastructure.DbContext
 {
     public interface IApplicationContext
     {
-        DbSet<Test> Tests { get; set; }
-
+      
+        DbSet<QrCodeToken> QrCodeTokens { get; set; }
 
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
     }
