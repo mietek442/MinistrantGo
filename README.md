@@ -122,6 +122,7 @@ dotnet ef database drop
 dotnet ef database
 ```
 🇬🇧 Make sure to change the server connection when you make migration string in your, after migrations you change defaultconnection string back `appsettings.json` file from: 
+
 🇵🇱 Upewnij się, że zmieniłeś appseting gdy tworzysz migracje w  pliku appsettings.json, a po migracjach zmień appsettings.json spowrotem. :
 
 During normal work:  
