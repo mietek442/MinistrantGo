@@ -26,7 +26,7 @@ namespace Api.Features.QRCode.Commands.CreateQRCode
         ]
         public override async Task<ActionResult<QrCodeToken>> HandleAsync(CancellationToken cancellationToken = default)
         {
-            return await _mediator.Send(new CreateQRCodeTokenCommand { QRCodeTokenRequest = 1}, cancellationToken);
+            return await _mediator.Send(new CreateQRCodeTokenCommand { }, cancellationToken);
             
         }
     }
